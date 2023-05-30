@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NxGNMovie.API", "NxGNMovie.API\NxGNMovie.API.csproj", "{8CCE8888-2193-44CD-8102-FE9809117123}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NxGNMovie.API", "NxGNMovie.API\NxGNMovie.API.csproj", "{8CCE8888-2193-44CD-8102-FE9809117123}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{10A38410-D7DA-4127-86B2-B2F154E307B5}"
 EndProject
@@ -13,15 +13,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{1B2DA9AA-AD1A-4F5F-8AD7-1A0FDC87D8EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NxGNMovie.Application", "NxGNMovie.Application\NxGNMovie.Application.csproj", "{CDC9D740-D952-46CF-8DA6-76B67A00E546}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NxGNMovie.Application", "NxGNMovie.Application\NxGNMovie.Application.csproj", "{CDC9D740-D952-46CF-8DA6-76B67A00E546}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NxGNMovie.Application.Contracts", "NxGNMovie.Application.Contracts\NxGNMovie.Application.Contracts.csproj", "{C815BB02-C32E-4F76-A867-F203C1BC1A82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NxGNMovie.Application.Contracts", "NxGNMovie.Application.Contracts\NxGNMovie.Application.Contracts.csproj", "{C815BB02-C32E-4F76-A867-F203C1BC1A82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NxGNMovie.Application.Models", "NxGNMovie.Application.Models\NxGNMovie.Application.Models.csproj", "{6BA295FA-EA17-41B9-B5AA-167E344BC199}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NxGNMovie.Application.Models", "NxGNMovie.Application.Models\NxGNMovie.Application.Models.csproj", "{6BA295FA-EA17-41B9-B5AA-167E344BC199}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NxGNMovie.Domain", "NxGNMovie.Domain\NxGNMovie.Domain.csproj", "{601F60EE-3E7F-46EE-901D-0599D2D79CAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NxGNMovie.Domain", "NxGNMovie.Domain\NxGNMovie.Domain.csproj", "{601F60EE-3E7F-46EE-901D-0599D2D79CAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NxGNMovie.Persistance", "NxGNMovie.Persistance\NxGNMovie.Persistance.csproj", "{37BC3B57-D380-40B3-A189-CB31ADE5CE51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NxGNMovie.Persistance", "NxGNMovie.Persistance\NxGNMovie.Persistance.csproj", "{37BC3B57-D380-40B3-A189-CB31ADE5CE51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AF98FFD0-BE17-437B-BF5D-1B2A03F8F534}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NxGNMovie.Application.Tests", "NxGNMovie.Application.Tests\NxGNMovie.Application.Tests.csproj", "{E7AB3837-047E-4BE3-9CD1-B01120652F4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,10 @@ Global
 		{37BC3B57-D380-40B3-A189-CB31ADE5CE51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37BC3B57-D380-40B3-A189-CB31ADE5CE51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37BC3B57-D380-40B3-A189-CB31ADE5CE51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7AB3837-047E-4BE3-9CD1-B01120652F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7AB3837-047E-4BE3-9CD1-B01120652F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7AB3837-047E-4BE3-9CD1-B01120652F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7AB3837-047E-4BE3-9CD1-B01120652F4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +72,7 @@ Global
 		{6BA295FA-EA17-41B9-B5AA-167E344BC199} = {10A38410-D7DA-4127-86B2-B2F154E307B5}
 		{601F60EE-3E7F-46EE-901D-0599D2D79CAE} = {6312DDA8-93E7-43B3-8256-C437DC42C0D5}
 		{37BC3B57-D380-40B3-A189-CB31ADE5CE51} = {983228A5-7EFD-4529-8615-5EDD3EB65CA8}
+		{E7AB3837-047E-4BE3-9CD1-B01120652F4A} = {AF98FFD0-BE17-437B-BF5D-1B2A03F8F534}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7EDC51AC-0790-4A64-96D6-0865D6B54AA6}

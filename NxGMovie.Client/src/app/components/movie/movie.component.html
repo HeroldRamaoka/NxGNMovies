@@ -1,0 +1,29 @@
+<div class="main-content">
+  <div class="card bg-light">
+     <div class="card-header">
+      <h4 class="text-dark">Movies</h4>
+
+      <button class="btn btn-primary" (click)="addMovie()">Add to Cart</button>
+     </div>
+     <div class="card-body row">
+
+      <ag-grid-angular
+        [rowData]="movies"
+        class="ag-theme-alpine"
+        style="height: 500px;"
+        [columnDefs]="columnDefs"
+        [defaultColDef]="defaultColDef">
+    
+        <ng-template agTemplate="cellRenderer">
+          <button (click)="editMovie($event)">Edit</button>
+          <button (click)="deleteMovie($event)">Delete</button>
+        </ng-template>
+    </ag-grid-angular>
+     </div>
+  </div>
+</div>
+
+
+
+
+

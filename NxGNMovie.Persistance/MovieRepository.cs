@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Microsoft.VisualBasic;
 using NxGNMovie.Application.Contracts.Interfaces;
 using NxGNMovie.Domain.Entities;
 
@@ -46,20 +47,35 @@ namespace NxGNMovie.Persistance
 
         public async Task Add(Movie movie)
         {
-            const string query = "INSERT INTO Movies (Title, Year, Director) VALUES (@Title, @Year, @Director)";
+            const string query = "INSERT INTO Movies (Name, Category, Rating, CreatedDate, Author) VALUES (@Name, @Category, @Rating, @CreatedDate, @Author)";
             using (var connection = _dbContext.CreateConnection())
             {
-                await connection.ExecuteAsync(query, movie);
+                await connection.ExecuteAsync(query, new
+                {
+                    Name = movie.Name,
+                    Category = movie.Category,
+                    Rating = movie.Rating,
+                    CreatedDate = movie.Created.CreatedDate,
+                    Author = movie.Created.Author
+                });
             }
         }
 
         public async Task Update(Movie movie)
         {
-            const string query = "UPDATE Movies SET Title = @Title, Year = @Year, Director = @Director WHERE Id = @Id";
+            const string query = "UPDATE Movies SET Name = @Name, Category = @Category, Rating = @Rating, ModifiedDate = @ModifiedDate, ModifiedBy = @ModifiedBy WHERE Id = @Id";
 
             using (var connection = _dbContext.CreateConnection())
             {
-                await connection.ExecuteAsync(query, movie);
+                await connection.ExecuteAsync(query, new
+                {
+                    Id = movie.Id,
+                    Name = movie.Name,
+                    Category = movie.Category,
+                    Rating = movie.Rating,
+                    ModifiedDate = movie.Modified.ModifiedDate,
+                    ModifiedBy = movie.Modified.ModifiedBy
+                });
             }
         }
 
