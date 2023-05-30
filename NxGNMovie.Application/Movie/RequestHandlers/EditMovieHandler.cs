@@ -33,8 +33,16 @@ namespace NxGNMovie.Application.Movie.RequestHandlers
                 return result;
             }
 
-            existingMovie.SetModifiedInfo(Constants.AdminUser);
-            await _movieRepository.Update(existingMovie);
+            var entity = new Domain.Entities.Movie
+            {
+                Id = existingMovie.Id,
+                Name = request.Name,
+                Rating = request.Rating,
+                Category = request.Category,
+                Modified = new Domain.ValueObjects.Modified(Constants.AdminUser),
+            };
+
+            await _movieRepository.Update(entity);
 
             return result;
         }

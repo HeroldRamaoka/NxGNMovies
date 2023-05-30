@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 ml-auto mr-auto">
+
+            <div class="card card-login">
+                <div class="card-header card-header-rose text-center">
+                    <h4 class="card-title">Movie</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 mr-auto">
+                            <form *ngIf="movie" class="form" method="" action="">
+                                    <input placeholder="Name" [(ngModel)]="movie.name" [ngModelOptions]="{standalone: true}" required="true" type="text">
+                                    <input placeholder="Category" [(ngModel)]="movie.category" [ngModelOptions]="{standalone: true}" required="true" type="text">
+                                    <input placeholder="Rating" [(ngModel)]="movie.rating" [ngModelOptions]="{standalone: true}" required="true" type="text">
+                                <div class="text-center">
+                                    <a (click)="addEdit(movie)" class="btn btn-rose btn-round mt-4">Add Movie</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
